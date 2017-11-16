@@ -29,6 +29,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile project(':loadinglibrary')
+    api project(':loadinglibrary')
+
+    //Android studio 3.0之后 compile 已过时。
+    //新增 implementation  和 api 。
+    //api 和 compile 完全一样
+    //implementation，依赖包中的依赖包，app无法访问
+    //api，依赖包中的依赖包，app可以访问
 
 }

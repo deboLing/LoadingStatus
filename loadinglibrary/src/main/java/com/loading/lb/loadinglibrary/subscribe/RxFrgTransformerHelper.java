@@ -18,8 +18,8 @@ import io.reactivex.schedulers.Schedulers;
  * 功能：fragment 结合LoadingObserver/LoadingSubscribe使用
  */
 
-public class RxFrgTransformerHelper {
-    public static  <T> ObservableTransformer<T, T> apply(final RxFragment context) {
+public class RxFrgTransformerHelper<T> {
+    public   <T> ObservableTransformer<T, T> apply(final RxFragment context) {
         return new ObservableTransformer<T, T>() {
             @Override
             public ObservableSource<T> apply(Observable<T> upstream) {

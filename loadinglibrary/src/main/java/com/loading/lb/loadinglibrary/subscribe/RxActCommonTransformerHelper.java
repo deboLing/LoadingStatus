@@ -24,12 +24,8 @@ import io.reactivex.schedulers.Schedulers;
  */
 
 public class RxActCommonTransformerHelper<T> {
-
     private Context context;
     private MaterialDialog materialDialog;
-
-
-
     public   ObservableTransformer<T, T> apply(final Context context) {
 
         this.context = context;
@@ -56,7 +52,6 @@ public class RxActCommonTransformerHelper<T> {
             }
         };
     }
-
     private void showProgressDialog() {
         materialDialog = new MaterialDialog.Builder(context)
                 .progress(true,100)
@@ -64,7 +59,6 @@ public class RxActCommonTransformerHelper<T> {
                 .build();
         materialDialog.show();
     }
-
     private void dismissProgressDialog() {
         if (materialDialog != null && materialDialog.isShowing()) {
             materialDialog.dismiss();

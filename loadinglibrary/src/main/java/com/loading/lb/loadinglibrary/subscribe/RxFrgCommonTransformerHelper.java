@@ -23,7 +23,7 @@ import io.reactivex.schedulers.Schedulers;
  * 功能：结合CommonSubscribe使用   将进度框封装在这里
  */
 
-public class RxFrgCommonTransformerHelper {
+public class RxFrgCommonTransformerHelper<T> {
 
     private Context context;
     private MaterialDialog materialDialog;
